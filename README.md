@@ -1,1 +1,1 @@
-# Dr-Zhi.github.io
+# Notable : Takeaways with AI
