@@ -5,13 +5,16 @@
     <p>Sorry the URL you requested is not supported in browser:</p>
     <p id="url"></p>
     <head>
-      <meta http-equiv="refresh" content="3; url=/?deeplink=${encodeURIComponent(window.location.href)}">
       <title>Redirecting to Home Page</title>
     </head>
     <p>
-    <p>Redirecting to home page to install the mobile applications. If you are not redirected automatically, follow this <a href="/?deeplink=${encodeURIComponent(window.location.href)}">link to the home page</a>.</p>
+    <p>Redirecting to home page to install the mobile apps</p>
     <script>
       document.getElementById("url").innerHTML = window.location.href;
+      const encodedUrl = encodeURIComponent(window.location.href);
+      setTimeout(function () {
+          window.location.href = "/?deeplink=${encodedUrl}";
+      }, 3000);
     </script>
   </body>
 </html>
