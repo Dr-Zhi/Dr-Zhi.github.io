@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Notable: Takeaways with AI</title>
-</head>
-<body>
-</body>
+  </head>
+  <body>
+    You were redirected from deep link: 
+    <p id="deep-link"></p>
+    Please install our iOS app: Notable: Takeaways with AI
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      var originalUrl = decodeURIComponent(urlParams.get('deeplink'));
+      document.getElementById("deep-link").innerHTML = originalUrl;
+    </script>
+  </body>
 </html>

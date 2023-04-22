@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=/">
-    <title>Redirecting to Home Page</title>
-  </head>
   <body>
-    <p>If you are not redirected automatically, follow this <a href="/">link to the home page</a>.</p>
+    <h1>Page Not Found</h1>
+    <p>Sorry the URL you requested is not supported in browser:</p>
+    <p id="url"></p>
+    <head>
+      <meta http-equiv="refresh" content="3; url=/?deeplink=${encodeURIComponent(window.location.href)}">
+      <title>Redirecting to Home Page</title>
+    </head>
+    <p>
+    <p>Redirecting to home page to install the mobile applications. If you are not redirected automatically, follow this <a href="/?deeplink=${encodeURIComponent(window.location.href)}">link to the home page</a>.</p>
+    <script>
+      document.getElementById("url").innerHTML = window.location.href;
+    </script>
   </body>
 </html>
